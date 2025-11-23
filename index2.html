@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShubhStudio.ai — Cinematic AI Video Creation</title>
+  <meta name="description" content="ShubhStudio.ai — Cinematic AI video creation for brands, creators and businesses. AI avatars, script-to-video, product promos, reels and more." />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Basic styling (embed) -->
+  <style>
+    :root{
+      --accent:#0f766e; /* teal */
+      --dark:#0b1220;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f8fafc;
+      --glass: rgba(255,255,255,0.6);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{background:linear-gradient(180deg,rgba(15,118,110,0.03),transparent);backdrop-filter:blur(4px)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand img{width:46px;height:46px;border-radius:8px;object-fit:cover}
+    nav ul{display:flex;gap:18px;align-items:center;margin:0;padding:0;list-style:none}
+    nav li{font-weight:600}
+    .cta{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;font-weight:700}
+
+    /* Hero */
+    .hero{padding:60px 0 40px;display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center}
+    .hero h1{font-size:2.1rem;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .features{display:flex;gap:12px;flex-wrap:wrap}
+    .pill{background:white;border-radius:999px;padding:8px 12px;box-shadow:0 4px 12px rgba(2,6,23,0.06);font-weight:600}
+
+    /* Card */
+    .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+
+    /* Services */
+    .services{padding:40px 0}
+    .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .service {padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.9),white);}
+    .service h4{margin:0 0 8px}
+    .service p{margin:0;color:var(--muted);font-size:0.95rem}
+
+    /* Demo Gallery */
+    .demo-section{padding:40px 0}
+    .demo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .demo-card{position:relative;border-radius:12px;overflow:hidden;cursor:pointer}
+    .demo-thumb{display:block;width:100%;height:180px;object-fit:cover}
+    .demo-meta{padding:14px;background:white}
+    .playbtn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,var(--accent),#056762);box-shadow:0 8px 20px rgba(2,6,23,0.18);border:4px solid rgba(255,255,255,0.12)}
+    .playbtn svg{width:22px;height:22px;fill:white}
+
+    /* Portfolio */
+    .portfolio{padding:40px 0}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .portfolio-item{border-radius:12px;overflow:hidden}
+    .portfolio-item img{width:100%;height:160px;object-fit:cover}
+
+    /* Testimonials */
+    .testimonials{padding:40px 0}
+    .test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .testimonial{padding:18px;border-radius:12px;background:white}
+
+    /* Contact */
+    .contact{padding:40px 0}
+    form{display:grid;gap:12px}
+    input,textarea,select{padding:10px;border-radius:8px;border:1px solid #e6eef2;font-size:1rem}
+    button{padding:12px;border-radius:10px;border:0;background:var(--accent);color:white;font-weight:700}
+
+    /* Footer */
+    footer{padding:28px 0;color:var(--muted)}
+    .flex{display:flex;gap:16px;align-items:center}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .hero .card{order:2}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="logo-placeholder.png" alt="ShubhStudio.ai logo">
+        <div>
+          <div style="font-size:1.05rem">ShubhStudio.ai</div>
+          <div style="font-size:0.78rem;color:var(--muted);margin-top:2px">Cinematic AI Video Studio</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#demo">Demos</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="cta">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Cinematic AI Video Creation for Brands, Creators & Businesses</h1>
+        <p>At <strong>ShubhStudio.ai</strong>, we blend advanced AI with cinematic storytelling to produce videos that grab attention, communicate clearly, and convert viewers into customers.</p>
+
+        <div style="display:flex;gap:12px;margin:18px 0;flex-wrap:wrap">
+          <a href="#contact" class="cta">Request a Quote</a>
+          <a href="#demo" style="padding:10px 14px;border-radius:10px;background:white;border:1px solid #e6eef2;font-weight:700">View Demos</a>
+        </div>
+
+        <div style="margin-top:18px" class="features">
+          <span class="pill">AI Avatars</span>
+          <span class="pill">Script → Video</span>
+          <span class="pill">Product Promos</span>
+          <span class="pill">Social Reels</span>
+        </div>
+
+        <div style="margin-top:26px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:560px">
+          <div class="card">
+            <strong>Fast Turnaround</strong>
+            <div style="color:var(--muted);font-size:0.95rem">Quick drafts and revisions — get your first cut in days.</div>
+          </div>
+          <div class="card">
+            <strong>Cinematic Quality</strong>
+            <div style="color:var(--muted);font-size:0.95rem">Film-style composition, color grading & sound design.</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3 style="margin-top:0">Start Your Project</h3>
+        <p style="color:var(--muted)">Tell us about your idea and we'll send a customised plan, timeline & estimate.</p>
+        <form onsubmit="handleQuickLead(event)">
+          <input type="text" id="lead-name" placeholder="Your name" required>
+          <input type="email" id="lead-email" placeholder="Email" required>
+          <select id="lead-type" required>
+            <option value="">Select project type</option>
+            <option>Product Promo</option>
+            <option>Explainer / Avatar</option>
+            <option>Cinematic Story</option>
+            <option>Social Reel</option>
+            <option>Other</option>
+          </select>
+          <button type="submit">Get Quote</button>
+        </form>
+      </aside>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
+        <div>
+          <h2 style="margin:0">Our Services</h2>
+          <p style="margin:6px 0 0;color:var(--muted)">Everything you need — from AI avatars to cinematic storytelling.</p>
+        </div>
+      </div>
+
+      <div class="service-grid">
+        <div class="service card">
+          <h4>Cinematic AI Videos</h4>
+          <p>Story-driven videos with film-style camera movement, lighting and pacing. Ideal for brand storytelling and short films.</p>
+        </div>
+        <div class="service card">
+          <h4>AI Avatar Videos</h4>
+          <p>Realistic or stylized avatars for presentations, training, and explainers with natural-sounding multilingual voiceovers.</p>
+        </div>
+        <div class="service card">
+          <h4>Script-to-Video Production</h4>
+          <p>Concept → Script → Storyboard → AI production → Final edit. We handle the full pipeline for narrative and marketing videos.</p>
+        </div>
+        <div class="service card">
+          <h4>Product Promo & Ads</h4>
+          <p>Short, high-impact promos with 3D-style product reveals, motion graphics and ad-ready formats for social channels.</p>
+        </div>
+        <div class="service card">
+          <h4>Social Media Reels</h4>
+          <p>Vertical, attention-grabbing reels optimized for Instagram, TikTok and YouTube Shorts — trend-aware and fast.</p>
+        </div>
+        <div class="service card">
+          <h4>Educational & Training Videos</h4>
+          <p>E-learning modules with avatars, captions, and chaptering — perfect for online courses and corporate training.</p>
+        </div>
+        <div class="service card">
+          <h4>AI Voiceover & Dubbing</h4>
+          <p>Multilingual, natural-sounding AI voices with lip-sync-ready outputs for global audiences.</p>
+        </div>
+        <div class="service card">
+          <h4>Custom Editing & Sound Design</h4>
+          <p>Professional editing, color grading and audio mixing to give your AI footage a polished, cinematic finish.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo -->
+    <section id="demo" class="demo-section">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
+        <div>
+          <h2 style="margin:0">Demo Videos</h2>
+          <p style="margin:6px 0 0;color:var(--muted)">Click any demo to view a larger preview (replace demo links with your own hosted videos).</p>
+        </div>
+      </div>
+
+      <div class="demo-grid">
+        <!-- Demo Card Example: change data-video attribute to your video URL or YouTube link -->
+        <div class="demo-card card" data-video="demo/cinematic-demo.mp4">
+          <img class="demo-thumb" src="thumb-cinematic.jpg" alt="Cinematic demo">
+          <div class="playbtn" aria-hidden>
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+          </div>
+          <div class="demo-meta">
+            <h3 style="margin:0 0 6px">Cinematic AI Short Film</h3>
+            <div style="color:var(--muted);font-size:0.95rem">30–45s montage showcasing story & mood.</div>
+          </div>
+        </div>
+
+        <div class="demo-card card" data-video="demo/avatar-demo.mp4">
+          <img class="demo-thumb" src="thumb-avatar.jpg" alt="Avatar demo">
+          <div class="playbtn" aria-hidden>
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+          </div>
+          <div class="demo-meta">
+            <h3 style="margin:0 0 6px">AI Avatar Explainer</h3>
+            <div style="color:var(--muted);font-size:0.95rem">Professional presenter with clear multilingual voiceover.</div>
+          </div>
+        </div>
+
+        <div class="demo-card card" data-video="demo/product-demo.mp4">
+          <img class="demo-thumb" src="thumb-product.jpg" alt="Product demo">
+          <div class="playbtn" aria-hidden>
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+          </div>
+          <div class="demo-meta">
+            <h3 style="margin:0 0 6px">Product Promo</h3>
+            <div style="color:var(--muted);font-size:0.95rem">10–20s ad-ready product highlight with motion graphics.</div>
+          </div>
+        </div>
+
+        <div class="demo-card card" data-video="demo/reel-demo.mp4">
+          <img class="demo-thumb" src="thumb-reel.jpg" alt="Reel demo">
+          <div class="playbtn" aria-hidden>
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+          </div>
+          <div class="demo-meta">
+            <h3 style="margin:0 0 6px">Social Media Reel</h3>
+            <div style="color:var(--muted);font-size:0.95rem">Vertical reel optimised for IG & Shorts.</div>
+          </div>
+        </div>
+
+        <div class="demo-card card" data-video="demo/story-demo.mp4">
+          <img class="demo-thumb" src="thumb-story.jpg" alt="Story demo">
+          <div class="playbtn" aria-hidden>
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+          </div>
+          <div class="demo-meta">
+            <h3 style="margin:0 0 6px">Script-to-Video Story</h3>
+            <div style="color:var(--muted);font-size:0.95rem">See how we turn a simple script into a visual story.</div>
+          </div>
+        </div>
+
+        <div class="demo-card card" data-video="demo/voice-demo.mp4">
+          <img class="demo-thumb" src="thumb-voice.jpg" alt="Voice demo">
+          <div class="playbtn" aria-hidden>
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+          </div>
+          <div class="demo-meta">
+            <h3 style="margin:0 0 6px">AI Voiceover Demo</h3>
+            <div style="color:var(--muted);font-size:0.95rem">Short collection of multilingual samples.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
+        <div>
+          <h2 style="margin:0">Portfolio</h2>
+          <p style="margin:6px 0 0;color:var(--muted)">Selected projects — real client work and studio pieces.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item card"><img src="port1.jpg" alt="Project 1"><div style="padding:12px"><strong>Brand Story — Lumi</strong><div style="color:var(--muted)">Cinematic brand film for a lifestyle label.</div></div></div>
+        <div class="portfolio-item card"><img src="port2.jpg" alt="Project 2"><div style="padding:12px"><strong>Product Launch — Nova</strong><div style="color:var(--muted)">3D product reveal & ad edit.</div></div></div>
+        <div class="portfolio-item card"><img src="port3.jpg" alt="Project 3"><div style="padding:12px"><strong>Explainer — EduCore</strong><div style="color:var(--muted)">Avatar-led course module.</div></div></div>
+        <div class="portfolio-item card"><img src="port4.jpg" alt="Project 4"><div style="padding:12px"><strong>Short Film — "Second Sunrise"</strong><div style="color:var(--muted)">AI-assisted short with cinematic grade.</div></div></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
+        <h2 style="margin:0">What Clients Say</h2>
+      </div>
+
+      <div class="test-grid">
+        <div class="testimonial card"><strong>Riya S., Marketing Head</strong><div style="color:var(--muted);margin-top:8px">"ShubhStudio.ai delivered a cinematic promo that boosted our launch conversions by 3x. The process was fast & the edits were precise."</div></div>
+        <div class="testimonial card"><strong>Karan M., Founder</strong><div style="color:var(--muted);margin-top:8px">"Loved the avatar explainer — it saved us time and made onboarding simple for clients."</div></div>
+        <div class="testimonial card"><strong>Priya D., Educator</strong><div style="color:var(--muted);margin-top:8px">"The course videos felt professional and engaging. Students loved the avatar instructor."</div></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" style="padding:40px 0">
+      <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px">
+          <h2 style="margin:0">About ShubhStudio.ai</h2>
+          <p style="color:var(--muted)">ShubhStudio.ai is a next-gen video studio that combines AI tools with human creativity. We believe high-quality cinematic video should be accessible — fast, affordable and scalable. Our team handles concepting, AI production, voice, and final polish.</p>
+          <ul style="color:var(--muted)">
+            <li>Fast drafts & iterations</li>
+            <li>Scalable video production</li>
+            <li>Multilingual voice options</li>
+            <li>Privacy-first workflows</li>
+          </ul>
+        </div>
+        <div style="width:320px" class="card">
+          <strong>Quick Facts</strong>
+          <div style="color:var(--muted);margin-top:8px">Founded: 2025<br>Services: AI video, Avatars, Script-to-video, Editing<br>Contact: contact@shubhstudio.ai</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div style="display:flex;gap:28px;flex-wrap:wrap">
+        <div style="flex:1;min-width:300px">
+          <h2>Contact & Project Enquiry</h2>
+          <p style="color:var(--muted)">Ready to start? Tell us a bit about your project and we’ll reply with an estimate and timeline.</p>
+
+          <form onsubmit="handleContact(event)" class="card">
+            <input type="text" id="name" placeholder="Full name" required>
+            <input type="email" id="email" placeholder="Email address" required>
+            <input type="text" id="company" placeholder="Company (optional)">
+            <select id="service-select">
+              <option value="Cinematic">Cinematic AI Video</option>
+              <option value="Avatar">AI Avatar / Explainer</option>
+              <option value="ProductPromo">Product Promo</option>
+              <option value="Social">Social Reel</option>
+              <option value="Training">Educational / Training</option>
+            </select>
+            <textarea id="details" rows="5" placeholder="Project details, budget, deadline"></textarea>
+            <button type="submit">Send Enquiry</button>
+          </form>
+        </div>
+
+        <aside style="width:320px" class="card">
+          <strong>Get in touch</strong>
+          <div style="color:var(--muted);margin-top:8px">Email: <a href="mailto:contact@shubhstudio.ai">contact@shubhstudio.ai</a><br>WhatsApp: +91 90000 00000 (replace with your number)</div>
+          <div style="margin-top:12px"><a href="#portfolio">View portfolio</a></div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+      <div style="display:flex;gap:12px;align-items:center">
+        <img src="logo-placeholder.png" alt="logo" style="width:38px;height:38px;border-radius:8px">
+        <div>
+          <div style="font-weight:700">ShubhStudio.ai</div>
+          <div style="font-size:0.85rem;color:var(--muted)">Cinematic AI Video Studio</div>
+        </div>
+      </div>
+
+      <div style="color:var(--muted);margin-top:6px">© 2025 ShubhStudio.ai — All rights reserved</div>
+    </div>
+  </footer>
+
+  <!-- Video Modal / Lightbox -->
+  <div id="videoModal" style="display:none;position:fixed;inset:0;background:rgba(2,6,23,0.6);z-index:9999;align-items:center;justify-content:center;padding:20px">
+    <div style="max-width:980px;width:100%;background:transparent;position:relative">
+      <button id="closeModal" style="position:absolute;right:-8px;top:-8px;border-radius:999px;border:0;background:white;padding:6px 10px;cursor:pointer;font-weight:700">✕</button>
+      <div style="background:black;border-radius:12px;overflow:hidden">
+        <video id="modalVideo" controls style="width:100%;height:auto;display:block;max-height:80vh">
+          <source src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Demo lightbox
+    document.querySelectorAll('.demo-card').forEach(card => {
+      card.addEventListener('click', ()=>{
+        const videoSrc = card.getAttribute('data-video');
+        if(!videoSrc) return alert('No demo video added yet');
+        const modal = document.getElementById('videoModal');
+        const player = document.getElementById('modalVideo');
+        player.pause();
+        player.querySelector('source').src = videoSrc;
+        player.load();
+        modal.style.display = 'flex';
+      });
+    });
+
+    document.getElementById('closeModal').addEventListener('click', ()=>{
+      const modal = document.getElementById('videoModal');
+      const player = document.getElementById('modalVideo');
+      player.pause();
+      player.querySelector('source').src = '';
+      player.load();
+      modal.style.display = 'none';
+    });
+
+    // Quick lead form (hero)
+    function handleQuickLead(e){
+      e.preventDefault();
+      const name = document.getElementById('lead-name').value.trim();
+      const email = document.getElementById('lead-email').value.trim();
+      const type = document.getElementById('lead-type').value;
+      if(!name||!email||!type) return alert('Please fill all fields');
+      // This demo just opens mailto with prefilled content — replace with real backend when ready
+      const subject = encodeURIComponent('ShubhStudio.ai - Project Inquiry');
+      const body = encodeURIComponent(`Name: ${name}%0AEmail: ${email}%0AProject Type: ${type}%0A%0APlease share details here...`);
+      window.location.href = `mailto:contact@shubhstudio.ai?subject=${subject}&body=${body}`;
+    }
+
+    // Contact form
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const service = document.getElementById('service-select').value;
+      const details = document.getElementById('details').value.trim();
+      if(!name||!email||!details) return alert('Please enter name, email and project details');
+      const subject = encodeURIComponent('New Project Enquiry — ' + service);
+      const body = encodeURIComponent(`Name: ${name}%0AEmail: ${email}%0ACompany: ${company}%0AService: ${service}%0A%0ADetails:%0A${details}`);
+      window.location.href = `mailto:contact@shubhstudio.ai?subject=${subject}&body=${body}`;
+    }
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const targetId = a.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}
+      });
+    });
+  </script>
+</body>
+</html>
